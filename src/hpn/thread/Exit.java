@@ -1,8 +1,8 @@
 package hpn.thread;
 
 public class Exit implements Runnable {
-    @Override
-    public void run() {
+
+    public void exit() {
         String[] string = {
                 "☪ ☪ ☪ ☪ ☪ ☪ ☪ ☪ ☪ ☪ ☪ ☪ ☪ ☪ ☪ ☪",
                 "☪           Have a nice day!         ☪",
@@ -22,5 +22,10 @@ public class Exit implements Runnable {
         }
         System.exit(0);
         return;
+    }
+
+    @Override
+    public void run() {
+
     }
 }

@@ -1,4 +1,6 @@
-package hpn.view;
+package hpn.view.ManagerFootball;
+
+import hpn.view.Menu;
 
 import java.util.Scanner;
 
@@ -7,7 +9,7 @@ private static Scanner scanner = new Scanner(System.in);
 
 public static void create() {
     Menu.ManagerFootball();
-    ManagerFootballView managerFootballView = new ManagerFootballView();
+    FootballView footballView = new FootballView();
     System.out.println("Chọn chức năng \n ➨ \t");
     try {
         int choice = Integer.parseInt(scanner.nextLine());
@@ -15,31 +17,31 @@ public static void create() {
         do {
             switch (choice) {
                 case 1:
-                    managerFootballView.show();
+//                    managerFootballView.show();
                     break;
                 case 2:
-                    managerFootballView.add();
+                    AddView.add();
                     break;
-                case 3:
-                    managerFootballView.suaNhanVien();
-                    break;
-                case 4:
-                    managerFootballView.xoaNhanVien();
-                    break;
-                case 5:
-                    managerFootballView.xuatNhanVien();
-                    break;
-                case 6:
-                    managerFootballView.timKiemCauThu();
-                    break;
-                case 7:
-                    managerFootballView.nhapDuLieuTuDong();
-                    break;
+//                case 3:
+//                    managerFootballView.suaNhanVien();
+//                    break;
+//                case 4:
+//                    managerFootballView.xoaNhanVien();
+//                    break;
+//                case 5:
+//                    managerFootballView.xuatNhanVien();
+//                    break;
+//                case 6:
+//                    managerFootballView.timKiemCauThu();
+//                    break;
+//                case 7:
+//                    managerFootballView.nhapDuLieuTuDong();
+//                    break;
                 case 8:
                     Menu.startMenu();
                     break;
                 case 0:
-                    Menu.exit();
+//                    Menu.exit();
                     System.exit(0);
                 default:
                     System.out.println("Không hợp lệ, xin vui lòng nhập lại");

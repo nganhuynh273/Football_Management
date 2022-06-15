@@ -1,4 +1,4 @@
-package hpn.view;
+package hpn.view.ManagerSchedule;
 
 public class ManagerScheduleView {
 }

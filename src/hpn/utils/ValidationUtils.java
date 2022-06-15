@@ -7,34 +7,54 @@ import java.util.Date;
 import java.util.regex.Pattern;
 
 public class ValidationUtils {
-    public static final String NAME_REGEX = "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$";
+    public static final String NAME_REGEX = "^([A-Z]+[a-z]*[ ]?)+$";
     public static final String PASSWORD_REGEX = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$";
     public static final String PHONE_REGEX = "^[0][1-9][0-9]{8,9}$";
     public static final String EMAIL_REGEX = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}$";
     public static final String USERNAME_REGEX = "^[A-Za-z][A-Za-z0-9_]{7,19}$";
     public static final String ADDRESS_REGEX = "^[A-Za-z][A-Za-z0-9_]{7,19}$";
+    public static final String MANHANVIEN_REGEX = "^([HLV]*\\d{0,3})|([CT]*\\d{0,3})$";
+
+    public static final String GIOITINH_REGEX = "^(Nam)|(Nữ)$";
+
+
+
+    public static boolean isGioitinh(String gioiTinh) {
+        return Pattern.matches(GIOITINH_REGEX, gioiTinh);
+    }
+
+    public static boolean isIDStaffValid(String maNhanvien) {
+
+        return Pattern.matches(MANHANVIEN_REGEX, maNhanvien);
+    }
 
     public static boolean isPasswordValid(String password) {
+
         return Pattern.matches(PASSWORD_REGEX, password);
     }
 
-    public static boolean isNameValid(String name) {
-        return Pattern.matches(NAME_REGEX, name);
+    public static boolean isNameValid(String quocTich) {
+
+        return Pattern.matches(NAME_REGEX, quocTich);
     }
 
     public static boolean isPhoneValid(String phone) {
+
         return Pattern.matches(PHONE_REGEX, phone);
     }
 
     public static boolean isEmailValid(String email) {
+
         return Pattern.matches(EMAIL_REGEX, email);
     }
 
     public static boolean isUsernameValid(String username) {
+
         return Pattern.matches(USERNAME_REGEX, username);
     }
 
     public static boolean isAddressValid(String address) {
+
         return Pattern.matches(ADDRESS_REGEX, address);
     }
 

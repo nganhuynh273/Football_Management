@@ -1,3 +1,4 @@
+
 package hpn.view;
 
 import java.util.InputMismatchException;
@@ -68,10 +69,10 @@ public class Menu {
                 int choice = Integer.parseInt(scanner.nextLine());
                 switch (choice) {
                     case 1:
-                        FootballView.create();
+//                        FootballView.create();
                         break;
                     case 2:
-                        ScheduleView.start();
+//                        ScheduleView.start();
                         break;
                     default:
                         System.out.println("Không hợp lệ, xin vui lòng nhập lại!");
@@ -84,4 +85,8 @@ public class Menu {
             e.getStackTrace();
         }
     }
+
+    public static void exit() {
+    }
 }
+
